@@ -1,0 +1,2 @@
+static là thành phần tĩnh thể hiện hành động của class.
+interface bat buoc moi nguoi phai tuan theo, no nhu 1 quy tac

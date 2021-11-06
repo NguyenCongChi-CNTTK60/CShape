@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="manager_market_smartModelStoreContainer" CdmEntityContainer="manager_market_smartEntities">
+    <FunctionImportMapping FunctionImportName="SP_getdata" FunctionName="manager_market_smartModel.Store.SP_getdata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="manager_market_smartModel.SP_getdata_Result">
+          <ScalarProperty Name="Mahh" ColumnName="Mahh" />
+          <ScalarProperty Name="Tenhh" ColumnName="Tenhh" />
+          <ScalarProperty Name="ĐVT" ColumnName="ĐVT" />
+          <ScalarProperty Name="Dongia" ColumnName="Dongia" />
+          <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+          <ScalarProperty Name="Mahd" ColumnName="Mahd" />
+          <ScalarProperty Name="Makh" ColumnName="Makh" />
+          <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+          <ScalarProperty Name="Manv" ColumnName="Manv" />
+          <ScalarProperty Name="Ngaytao" ColumnName="Ngaytao" />
+          <ScalarProperty Name="Makh1" ColumnName="Makh1" />
+          <ScalarProperty Name="Mahd1" ColumnName="Mahd1" />
+          <ScalarProperty Name="Mahh1" ColumnName="Mahh1" />
+          <ScalarProperty Name="Soluong1" ColumnName="Soluong1" />
+          <ScalarProperty Name="Dongia1" ColumnName="Dongia1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

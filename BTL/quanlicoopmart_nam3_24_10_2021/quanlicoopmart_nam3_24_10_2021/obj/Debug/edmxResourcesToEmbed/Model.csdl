@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="manager_market_smartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="manager_market_smartEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SP_getdata" ReturnType="Collection(manager_market_smartModel.SP_getdata_Result)">
+      <Parameter Name="Makh" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_getdata_Result">
+    <Property Type="String" Name="Mahh" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Tenhh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ĐVT" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Dongia" Nullable="true" />
+    <Property Type="Int32" Name="Soluong" Nullable="true" />
+    <Property Type="String" Name="Mahd" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Makh" Nullable="true" MaxLength="20" />
+    <Property Type="Double" Name="Tongtien" Nullable="true" />
+    <Property Type="String" Name="Manv" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Ngaytao" Nullable="true" />
+    <Property Type="String" Name="Makh1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Mahd1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Mahh1" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Soluong1" Nullable="true" />
+    <Property Type="Int32" Name="Dongia1" Nullable="true" />
+  </ComplexType>
+</Schema>

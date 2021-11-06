@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="manager_market_smartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="SP_getdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Makh" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="manager_market_smartModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="manager_market_smartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="manager_market_smartEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="SP_getdata" ReturnType="Collection(manager_market_smartModel.SP_getdata_Result)">
+            <Parameter Name="Makh" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SP_getdata_Result">
+          <Property Type="String" Name="Mahh" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Tenhh" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ĐVT" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="Dongia" Nullable="true" />
+          <Property Type="Int32" Name="Soluong" Nullable="true" />
+          <Property Type="String" Name="Mahd" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Makh" Nullable="true" MaxLength="20" />
+          <Property Type="Double" Name="Tongtien" Nullable="true" />
+          <Property Type="String" Name="Manv" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Ngaytao" Nullable="true" />
+          <Property Type="String" Name="Makh1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Mahd1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Mahh1" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Soluong1" Nullable="true" />
+          <Property Type="Int32" Name="Dongia1" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="manager_market_smartModelStoreContainer" CdmEntityContainer="manager_market_smartEntities" >
+          <FunctionImportMapping FunctionImportName="SP_getdata" FunctionName="manager_market_smartModel.Store.SP_getdata">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="manager_market_smartModel.SP_getdata_Result">
+                <ScalarProperty Name="Mahh" ColumnName="Mahh" />
+                <ScalarProperty Name="Tenhh" ColumnName="Tenhh" />
+                <ScalarProperty Name="ĐVT" ColumnName="ĐVT" />
+                <ScalarProperty Name="Dongia" ColumnName="Dongia" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Mahd" ColumnName="Mahd" />
+                <ScalarProperty Name="Makh" ColumnName="Makh" />
+                <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+                <ScalarProperty Name="Manv" ColumnName="Manv" />
+                <ScalarProperty Name="Ngaytao" ColumnName="Ngaytao" />
+                <ScalarProperty Name="Makh1" ColumnName="Makh1" />
+                <ScalarProperty Name="Mahd1" ColumnName="Mahd1" />
+                <ScalarProperty Name="Mahh1" ColumnName="Mahh1" />
+                <ScalarProperty Name="Soluong1" ColumnName="Soluong1" />
+                <ScalarProperty Name="Dongia1" ColumnName="Dongia1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
